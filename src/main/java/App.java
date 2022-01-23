@@ -3,7 +3,6 @@ import java.io.*;
 
 public class App {
     public static void main(String [] args) {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader((System.in)));
         System.out.println("Welcome To Ceasar Cipher!");
         boolean runningProgram = true;
 
@@ -15,35 +14,43 @@ public class App {
             System.out.println("C. Exit");
             try{
 
-
-                String choice = bufferedReader.readLine();
+                String Choice = scan.nextLine();
                 System.out.println(choice);
 
                 if(choice.equals("A")){
 
-                    int key = 6;
-                    System.out.println("Enter a message");
-                    Console myConsole = System.console();
-                    String text = myConsole.readLine();
-                    System.out.println("You entered " + text);
-                    char[] chars = text.toCharArray();
-                    for (char c : chars) {
-                        c += key;
-                        System.out.print(c);
+                   public static String encoding(String pText, int Key) {
+		     pText = pText.toLowerCase();
+		     String cText ="";
+		     for(int i = 0; i<pText.length(); i++) {
+		   	int charIndex = alphabet.indexOf(pText.charAt(i));
+			int newIndex = (charIndex + Key) % 26;
+			char cipherChar = alphabet.charAt(newIndex);
+			cText = cText + cipherChar;
+		    }
+		    return cText;
 
-                    }
+	
+
+	}
 
                 }else if(choice.equals("B")){
-                    int key = 6;
-                    System.out.println("Enter a message");
-                    Console myConsole = System.console();
-                    String text = myConsole.readLine();
-                    System.out.println("You entered " + text);
-                    char[] chars = text.toCharArray();
-                    for (char c : chars) {
-                        c -= key;
-                        System.out.print(c);
-                    }
+                   public static String decoding(String cText, int Key) {
+		        cText = cText.toLowerCase();
+		        String pText = "";
+		        for (int i = 0; i<cText.length(); i++) {
+			    int charIndex = alphabet.indexOf(cText.charAt(i));
+		     	int newIndex = (charIndex - Key) % 26;
+			    if (newIndex <0) {
+				newIndex = alphabet.length() + newIndex;
+			}
+			char plainChar = alphabet.charAt(newIndex);
+			pText = pText + plainChar;
+		}
+		
+		
+		return pText;
+	}
 
                 }else if(choice.equals("C")) {
                     System.out.println("Successful Exit");
