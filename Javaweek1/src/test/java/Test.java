@@ -8,4 +8,9 @@ public class TestTest {
         Encryption testEncrypt = new Encryption("pText", Key);
         assertEquals(true, testEncrpt instanceof Encryption);
     }
-}
+ @Test
+ public void runEncrypt_ifInputIsString() {
+     Encryption testEncrypt = new Encryption("pText", Key);
+     assertEquals("abc", testEncrypt.getsInputString());
+ }
+ }
