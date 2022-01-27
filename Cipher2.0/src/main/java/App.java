@@ -5,9 +5,9 @@ public class App{
         Scanner userInput = new Scanner(System.in);
         boolean selectionsLoop = true;
 
-        System.out.println("Welcome to Caesar-Cipher");
+        System.out.println("*****Welcome to Caesar-Cipher*****");
         while(selectionsLoop){
-            System.out.println("..................................................");
+            System.out.println("....................................");
             System.out.println("Would you like to Encrypt or Decrypt?(Select a number): \n" + "1:Encrypt message \n" + "2:Decrypt message \n" + "3:Exit");
             int userSelection = userInput.nextInt();
             userInput.nextLine();
