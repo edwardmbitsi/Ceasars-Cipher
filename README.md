@@ -1,4 +1,4 @@
-# CEASAR CIPHER ENCRYPTION
+# CEASAR CIPHER
 
 ## INTRODUCTION
 ### The Ceasar Cipher is a tool for encryption. Each letter transforms into another letter, according to the Cipher. If you input a string, you will receive a new encoded string.
