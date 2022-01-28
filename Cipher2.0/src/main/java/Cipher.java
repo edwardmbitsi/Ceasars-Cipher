@@ -62,7 +62,7 @@ public class Cipher {
                 decryptedText += letter;
             }
             else {
-                if(shiftDirection.equalsIgnoreCase("right")){
+                if(shiftDirection.equalsIgnoreCase("forward")){
                     //right shift key decryption
                     for (int i = 0; i <alphabets.length ; i++) {
                         if(letter.equalsIgnoreCase(alphabets[i])){
