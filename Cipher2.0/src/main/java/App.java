@@ -28,7 +28,7 @@ public class App{
                         correctDirection = false;
                     }
                 }
-                System.out.println("How many alphabets to the " +userDirection + ".");
+                System.out.println("How many alphabets " +userDirection + ".");
                 int userShiftKey = userInput.nextInt();
                 Cipher cipher = new Cipher(userMessage);
                 System.out.println("Your Encrypted message is :\n" + cipher.codedText(userDirection,userShiftKey));
@@ -52,7 +52,7 @@ public class App{
                         correctDirection = false;
                     }
                 }
-                System.out.println("How many alphabets to the " +userDirection + ".");
+                System.out.println("How many alphabets  " +userDirection + ".");
                 int userShiftKey = userInput.nextInt();
                 Cipher cipher = new Cipher(userMessage);
                 System.out.println("Your decrypted message is :\n" + cipher.decodedText(userDirection,userShiftKey));
