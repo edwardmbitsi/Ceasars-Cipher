@@ -74,7 +74,7 @@ public class Cipher {
                         }
                     }
                 } else {
-                    //left key decryption
+                   
                     for (int i = alphabets.length-1; i >=0 ; i--) {
                         if (letter.equalsIgnoreCase(alphabets[i])){
                             if ((i+shiftKey) > alphabets.length-1){
